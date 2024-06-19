@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nexusTGamer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <style>
+        /* styles.css */
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Gugi', cursive;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .logo .nexus {
+            color: red;
+            margin-left: 300px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: yellow;
+        }
+
+        p {
+            margin-left: 90px;
+            font-size: 40px;
+            margin-top: 10px;
+        }
+
+        .nexus-heading,
+        .tgamer-heading {
+            color: red;
+            font-size: 200px;
+            text-align: center;
+        }
+
+        .nexus-heading {
+            margin-top: 20px;
+        }
+
+        .tgamer-heading {
+            margin-top: -160px; /* Adjust this value as needed */
+        }
+
+        .nexus-heading span,
+        .tgamer-heading span {
+            opacity: 0;
+            display: inline-block;
+            animation: fade 2s infinite;
+        }
+
+        @keyframes fade {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .nexus-heading span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .nexus-heading span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .nexus-heading span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .nexus-heading span:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .nexus-heading span:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        .tgamer-heading span:nth-child(1) {
+            animation-delay: 1s;
+        }
+
+        .tgamer-heading span:nth-child(2) {
+            animation-delay: 1.2s;
+        }
+
+        .tgamer-heading span:nth-child(3) {
+            animation-delay: 1.4s;
+        }
+
+        .tgamer-heading span:nth-child(4) {
+            animation-delay: 1.6s;
+        }
+
+        .tgamer-heading span:nth-child(5) {
+            animation-delay: 1.8s;
+        }
+
+        .tgamer-heading span:nth-child(6) {
+            animation-delay: 2s;
+        }
+
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: black;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+            font-size: 20px;
+            color: yellow;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="nexus">NEXUS</span>
+            </div>
+            <a href="payments.html" class="nav-link">PAYMENTS</a>
+        </div>
+    </div>
+    <p>I, Rahul Lokesh Owned This Website. Iam a Web Dev. A Streamer, A Content Creator. I Will Stream Thrice a Day. Fortnite Player, Enthusiasist.</p>
+    
+    <h2 class="nexus-heading">
+        <span>N</span><span>E</span><span>X</span><span>U</span><span>S</span>
+    </h2>
+    <h2 class="tgamer-heading">
+        <span>T</span><span>G</span><span>A</span><span>M</span><span>E</span><span>R</span>
+    </h2>
+
+    <div class="marquee-container">
+        <div class="marquee">NEXUS GAMING - Streamer, Web Developer, Content Creator All Rights Are Reserved. Officially Create By Rahul Lokesh</div>
+    </div>
+</body>
+</html>
