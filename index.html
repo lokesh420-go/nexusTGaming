@@ -8,18 +8,17 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
     <style>
-        /* styles.css */
-
         body {
             background-color: #000;
             color: #fff;
             font-family: 'Gugi', cursive;
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         .container {
-            max-width: 800px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 20px 0;
         }
@@ -30,24 +29,25 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo {
-            font-size: 60px;
+            font-size: 4rem;
             font-weight: bold;
+            flex: 1;
+            text-align: center;
         }
 
         .logo .nexus {
             color: red;
-            margin-left: 300px;
         }
 
         .nav-link {
             color: #fff;
             text-decoration: none;
-            font-size: 20px;
-            margin-top: 20px;
-            margin-right: 20px;
+            font-size: 1.25rem;
+            margin: 20px;
             transition: color 0.3s ease;
         }
 
@@ -56,16 +56,17 @@
         }
 
         p {
-            margin-left: 90px;
-            font-size: 40px;
-            margin-top: 10px;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 10px 0;
         }
 
         .nexus-heading,
         .tgamer-heading {
             color: red;
-            font-size: 200px;
+            font-size: 8vw;
             text-align: center;
+            margin-top: 20px; /* Adjust margin as needed */
         }
 
         .nexus-heading {
@@ -73,7 +74,7 @@
         }
 
         .tgamer-heading {
-            margin-top: -160px; /* Adjust this value as needed */
+            margin-top: -7vw; /* Adjust this value as needed */
         }
 
         .nexus-heading span,
@@ -136,21 +137,23 @@
             animation-delay: 2s;
         }
 
-        .marquee-container {
-            width: 100%;
-            overflow: hidden;
-            background-color: black;
+        .marquee-background {
             position: fixed;
             bottom: 0;
             left: 0;
+            width: 100%;
+            height: 40px; /* Adjust height as needed */
+            background-color: black;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
         .marquee {
             display: inline-block;
-            white-space: nowrap;
-            animation: marquee 10s linear infinite;
-            font-size: 20px;
+            animation: marquee 20s linear infinite;
+            font-size: 1rem;
             color: yellow;
+            padding-left: 100%; /* Start off-screen */
         }
 
         @keyframes marquee {
@@ -162,6 +165,37 @@
             }
         }
 
+        .responsive-image {
+            width: 100%; /* Adjust width as needed */
+            height: auto;
+            display: block;
+            margin: -40px auto; /* Adjust margin for centering */
+            max-width: 500px; /* Optional: set max-width for larger screens */
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 3rem;
+            }
+
+            .nav-link {
+                font-size: 1rem;
+            }
+
+            .nexus-heading,
+            .tgamer-heading {
+                font-size: 10vw;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .responsive-image {
+                width: 90%; /* Adjust image width for smaller screens */
+                margin-top: -20px; /* Adjust margin for better layout */
+            }
+        }
     </style>
 </head>
 <body>
@@ -173,7 +207,7 @@
             <a href="payments.html" class="nav-link">PAYMENTS</a>
         </div>
     </div>
-    <p>I, Rahul Lokesh Owned This Website. Iam a Web Dev. A Streamer, A Content Creator. I Will Stream Thrice a Day. Fortnite Player, Enthusiasist.</p>
+    <p>I, Rahul Lokesh Owned This Website. I am a Web Dev. A Streamer, A Content Creator. I Will Stream Thrice a Day. Fortnite Player, Enthusiast.</p>
     
     <h2 class="nexus-heading">
         <span>N</span><span>E</span><span>X</span><span>U</span><span>S</span>
@@ -182,8 +216,10 @@
         <span>T</span><span>G</span><span>A</span><span>M</span><span>E</span><span>R</span>
     </h2>
 
-    <div class="marquee-container">
-        <div class="marquee">NEXUS GAMING - Streamer, Web Developer, Content Creator All Rights Are Reserved. Officially Create By Rahul Lokesh</div>
+    <img src="raven.png" alt="Raven" class="responsive-image">
+
+    <div class="marquee-background">
+        <div class="marquee">NEXUS GAMING - Streamer, Web Developer, Content Creator All Rights Are Reserved. Officially Created By Rahul Lokesh</div>
     </div>
 </body>
 </html>
